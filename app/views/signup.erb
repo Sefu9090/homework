@@ -1,0 +1,44 @@
+<div class="signup"> 
+  <h1>Don't have an account</h1>
+  <h1>Sign Up Here</h1>
+  <form method="POST" action="/sign-up">
+   <h3> Username or Email:</h3><br>
+    <input type="text" name="username" placeholder="Username or Email" required>
+    <br>
+    <h3>Password:</h3><br>
+    <input type="password" name="password" placeholder="Password" required>
+    <br>
+
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    Teacher
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    Student
+  </label>
+</div>
+
+    <input class="btn" type="submit" value="Submit">
+  </form>
+<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" style="margin-left:622px; margin-top:10px;"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
+</div>

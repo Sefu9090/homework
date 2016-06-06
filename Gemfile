@@ -11,6 +11,6 @@ group :development do
 	gem "pry"
 	gem "sqlite3"
 	gem "tux"
-  	gem "shotgun"
+  gem "shotgun"
 
 end
